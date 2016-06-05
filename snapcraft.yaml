@@ -1,0 +1,16 @@
+name: golang-hello
+version: 1.0.7
+summary: Hello World written by golang
+description: Hello World written by golang for stadying snap package format
+confinement: strict
+
+apps:
+    hello:
+        command: bin/golang-hello
+        plugs: [system-observe]
+
+parts:
+    local:
+        plugin: go
+        source: .
+
